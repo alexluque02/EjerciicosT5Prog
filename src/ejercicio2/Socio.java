@@ -52,5 +52,5 @@ public class Socio {
 		return "Socio [id=" + id + ", nombre=" + nombre + ", apellidos=" + apellidos + ", socioVip=" + socioVip + "]";
 	}
 	
-	
+	/*Calcular cuotas todal*/
 }

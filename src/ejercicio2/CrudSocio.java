@@ -25,8 +25,8 @@ public class CrudSocio {
 		return "CrudSocio [lista=" + lista + "]";
 	}
 	
-	public void agregar(int contador, Socio s) {
-		lista.add(contador, s);
+	public void agregar(Socio s) {
+		lista.add(s);
 	}
 	
 	public void mostrarSocios() {
@@ -35,8 +35,8 @@ public class CrudSocio {
 			if(lista.get(i).isSocioVip()) {
 				clientVip="Sí";
 			}
-			System.out.println("ID:"+lista.get(i).getId()+" Nombre y apellidos: "
-					+ ""+lista.get(i).getNombre()+" "+lista.get(i).getApellidos()+" Cliente VIP: "
+			System.out.println("ID:"+lista.get(i).getId()+" | Nombre y apellidos: "
+					+ ""+lista.get(i).getNombre()+" | "+lista.get(i).getApellidos()+" | Cliente VIP: "
 							+ ""+clientVip);
 		}
 	}
@@ -77,9 +77,9 @@ public class CrudSocio {
 		}
 	}
 	
-	public void borrarCliente(int i) {
-		if(i<=lista.size()) {
-			lista.remove(i);
+	public void borrarCliente(Socio s) {
+		if(s!=null) {
+			lista.remove(s);/*Si en este metodo busco un número, primero tendré que buscarlo*/
 		}
 	}
 }

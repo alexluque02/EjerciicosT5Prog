@@ -1,7 +1,6 @@
 package ejercicio2;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 import utilidades.Leer;
@@ -10,7 +9,7 @@ public class Principal {
 
 	public static void main(String[] args) {
 
-		int id, menu, contador=0, op, i;
+		int id, menu, op;
 		String nombre, apellidos;
 		boolean clienteVip=false;
 		List <Socio> lista = new ArrayList <Socio>();
@@ -37,26 +36,26 @@ public class Principal {
 				if(op==1) {
 					clienteVip=true;
 				}
-				cs.agregar(contador, new Socio(id, nombre, apellidos, clienteVip));
-				contador++;
+				c.getCs().agregar(new Socio(id, nombre, apellidos, clienteVip));
 				break;
 			case 2:
-				cs.mostrarSocios();
+				c.getCs().mostrarSocios();
 				System.out.println("Diga el id de Socio");
 				id=Leer.datoInt();
-				cs.mostrarSocio(cs.findSocio(id));
+				c.getCs().mostrarSocio(cs.findSocio(id));
 				break;
 			case 3:
 				System.out.println("Diga el id del cliente que desea modificar");
 				id=Leer.datoInt();
 				System.out.println("Diga el nombre nuevo que desea ponerle");
 				nombre=Leer.dato();
-				cs.cambiarNombre(cs.findSocio(id), nombre);
+				c.getCs().cambiarNombre(cs.findSocio(id), nombre);
 				break;
 			case 4:
+				c.getCs().mostrarSocios();
 				System.out.println("Diga que número de socio es");
-				i=Leer.datoInt();
-				cs.borrarCliente(i);
+				id=Leer.datoInt();
+				c.getCs().borrarCliente(cs.findSocio(id));
 				break;
 			case 0:
 				break;
