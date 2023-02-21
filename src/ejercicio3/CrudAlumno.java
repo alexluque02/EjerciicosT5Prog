@@ -50,11 +50,18 @@ public class CrudAlumno {
 		listaAlumnos.add(a);
 	}
 
-	public void findAlumno(Alumno a) {
-		if (listaAlumnos.contains(a)) {
-			System.out.println("si");
+	public Alumno findAlumno(Alumno a) {
+		boolean encontrado=false;
+		Iterator <Alumno> it=listaAlumnos.iterator();
+		while(it.hasNext() && !encontrado) {
+			if(listaAlumnos.hashCode(a)) {
+				encontrado=true;
+			}
+		}
+		if(encontrado) {
+			return a;
 		}else {
-			System.out.println("no");
+			return null;
 		}
 	}
 	
