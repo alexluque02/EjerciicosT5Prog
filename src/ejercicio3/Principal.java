@@ -22,12 +22,13 @@ public class Principal {
 		double notaMedia;
 		
 		System.out.println("Bienvenido al programa del colegio");
-		listaAlumnos.add(new Alumno(1, "Alex", 20, 6.0));
+		listaAlumnos.add(new Alumno(1, "Alex", 20, 4.0));
+		listaAlumnos.add(new Alumno(2, "Indira", 19, 7.0));
 		
 		do {
 			System.out.println("1. Matricular Alumno\n"
 					+ "2. Mostrar un alumno\n"
-					+ "3. Modificar alumno\n"
+					+ "3. Mostrar alumnos\n"
 					+ "4. Borrar Alumno\n"
 					+ "5. Calcular Nota Media de todos los Alumnos\n"
 					+ "6. Ver número total de suspensos\n"
@@ -55,7 +56,21 @@ public class Principal {
 				edad=Leer.datoInt();
 				System.out.println("Diga su nota media");
 				notaMedia=Leer.datoDouble();
-				System.out.println(ca.findAlumno(new Alumno(id, nombre, edad, notaMedia)));
+				ca.findAlumno(new Alumno(id, nombre, edad, notaMedia));
+				break;
+			case 3:
+				ca.mostrarAlumnos();
+				System.out.println();
+				ca.mostrarAlumnosV2();
+				System.out.println();
+				ca.mostrarAlumnosV3();
+				break;
+			case 5:
+				System.out.println(ca.calcularNotaMediaTotal());
+				break;
+			case 6:
+				System.out.println(ca.contarAlumnosSuspensos());
+				break;
 			}
 		}while(menu!=0);
 		
