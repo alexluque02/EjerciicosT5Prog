@@ -56,7 +56,7 @@ public class Principal {
 				edad=Leer.datoInt();
 				System.out.println("Diga su nota media");
 				notaMedia=Leer.datoDouble();
-				System.out.println(ca.findAlumno(new Alumno(id, nombre, edad, notaMedia)));
+				//System.out.println(ca.findAlumno(new Alumno(id, nombre, edad, notaMedia)));
 				break;
 			case 3:
 				ca.mostrarAlumnos();

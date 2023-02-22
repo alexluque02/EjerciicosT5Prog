@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class CrudAlumno {
 
-	Set<Alumno> listaAlumnos;
+	private Set<Alumno> listaAlumnos;
 
 	public CrudAlumno(Set<Alumno> listaAlumnos) {
 		super();
@@ -50,7 +50,7 @@ public class CrudAlumno {
 		listaAlumnos.add(a);
 	}
 
-	public Alumno findAlumno(Alumno a) {
+	/*public Alumno findAlumno(Alumno a) {
 		boolean encontrado=false;
 		Iterator <Alumno> it=listaAlumnos.iterator();
 		while(it.hasNext() && !encontrado) {
@@ -63,7 +63,7 @@ public class CrudAlumno {
 		}else {
 			return null;
 		}
-	}
+	}*/
 	
 	public double calcularNotaMediaTotal() {
 		double suma=0;

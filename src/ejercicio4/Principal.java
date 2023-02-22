@@ -12,6 +12,7 @@ public class Principal {
 		
 		List <Persona> listaPersonas = new ArrayList <Persona> ();
 		int menu;
+		GestionPersonas gp;
 
 		listaPersonas.add(new Persona("54435772Q", "Alex", 20, 1.85));
 		listaPersonas.add(new Persona("54435771Q", "Carlos", 34, 1.55));
@@ -24,8 +25,10 @@ public class Principal {
 		listaPersonas.add(new Persona("54435774Q", "Eugenio", 41, 1.65));
 		listaPersonas.add(new Persona("54435776Q", "Santiago", 66, 1.75));
 		
+		gp =new GestionPersonas(listaPersonas);
+		
 		for (Persona p : listaPersonas) {
-			System.out.println(p);
+			gp.mostrarLinea(p);
 		}
 		
 		do {
@@ -39,19 +42,19 @@ public class Principal {
 			case 1:
 				Collections.sort(listaPersonas);
 				for (Persona p : listaPersonas) {
-					System.out.println(p);
+					gp.mostrarLinea(p);
 				}
 				break;
 			case 2:
 				Collections.sort(listaPersonas, new ComparaPorEdad());
 				for (Persona p : listaPersonas) {
-					System.out.println(p);
+					gp.mostrarLinea(p);
 				}
 				break;
 			case 3:
 				Collections.sort(listaPersonas, new ComparaPorAltura());
 				for (Persona p : listaPersonas) {
-					System.out.println(p);
+					gp.mostrarLinea(p);
 				}
 			}
 		}while(menu!=0);

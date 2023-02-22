@@ -1,6 +1,5 @@
 package ejercicio4;
 
-import java.util.Comparator;
 
 public class Persona implements Comparable <Persona>{
 
