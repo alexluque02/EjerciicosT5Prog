@@ -63,7 +63,7 @@ public class Contacto implements Comparable <Contacto>{
 	public int compareTo(Contacto c) {
 		String nombrec1=this.nombre;
 		String nombrec2=c.getNombre();
-        return nombrec1.toLowerCase().compareTo(nombrec2.toLowerCase());
+        return (nombrec1.toLowerCase().compareTo(nombrec2.toLowerCase()));
     }
 	
 	

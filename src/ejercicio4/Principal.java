@@ -7,6 +7,7 @@ public class Principal {
 
 	public static void main(String[] args) {
 		Map <Contacto, Integer> listaContactos=new HashMap <Contacto, Integer>();
+		Map<Contacto, Integer> ordenado;
 		Agenda a=new Agenda(listaContactos);
 		
 		a.add(new Contacto(1, "Alex", "a@a.com"), 664845326);
@@ -21,10 +22,18 @@ public class Principal {
 		
 		a.mostrarTodos();*/
 		
-		TreeMap<Contacto, Integer> ordenado = new TreeMap<>(listaContactos);
+		/*Hacer menu que el primero sea mostrar agenda sin treemap*/
 		
-		System.out.println(ordenado);
+		ordenado = new TreeMap<Contacto, Integer>();
+		ordenado.putAll(listaContactos);
 		
+		System.out.println("Lista Ordenada");
+		for (Contacto c : ordenado.keySet()) {
+			System.out.println("Clave: "+c+" Valor: "+ordenado.get(c));
+		}
+		
+		/*ordenado = new TreeMap<Contacto, Integer>(new ComparaPorID());*/ //Así en cada case
+		//Mé6todo replace para editar
 	}
 
 }
