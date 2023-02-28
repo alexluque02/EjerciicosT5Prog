@@ -1,6 +1,6 @@
 package ejercicio6;
 
-public class Trabajador implements Comparable <Trabajador>{
+public class Trabajador implements Comparable <Trabajador>, ISueldo{
 
 	private String nombre;
 	private String dni;
@@ -52,9 +52,6 @@ public class Trabajador implements Comparable <Trabajador>{
 				+ ", sueldoFinal=" + sueldoFinal + "]";
 	}
 	
-	public void calcularSueldo(double cant) {
-		this.sueldoFinal=cant*this.horasTrabajadas;
-	}
 
 	@Override
 	public int compareTo(Trabajador t) {
@@ -67,6 +64,10 @@ public class Trabajador implements Comparable <Trabajador>{
 				return -1;
 		return 0;
 	}
-	
+
+	@Override
+	public void calcularSueldo(double cant) {
+		this.sueldoFinal=cant*this.horasTrabajadas;
+	}
 	
 }
