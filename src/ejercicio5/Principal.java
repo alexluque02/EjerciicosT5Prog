@@ -56,6 +56,7 @@ public class Principal {
 				for (Persona p : listaPersonas) {
 					gp.mostrarLinea(p);
 				}
+				break;
 			}
 		}while(menu!=0);
 	}

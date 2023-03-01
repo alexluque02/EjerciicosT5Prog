@@ -15,22 +15,21 @@ public class Principal {
 		double cant;
 		int menu, horas;
 		String dni;
-		Trabajador t=new Trabajador ("Alex", "777777777Q", 128);
+		Trabajador t=new Trabajador ("Pedro", "777777777Q", 128);
 		
 		o.add(new Trabajador("Alex", "111111111Q", 123));
-		o.add(new Trabajador("Alex", "222222222Q", 167));
-		o.add(new Trabajador("Alex", "333333333Q", 100));
-		o.add(new Trabajador("Alex", "444444444Q", 190));
-		o.add(new Trabajador("Alex", "555555555Q", 120));
-		o.add(new Trabajador("Alex", "666666666Q", 118));
+		o.add(new Trabajador("Roberto", "222222222Q", 167));
+		o.add(new Trabajador("Raúl", "333333333Q", 100));
+		o.add(new Trabajador("María", "444444444Q", 190));
+		o.add(new Trabajador("Lucía", "555555555Q", 120));
+		o.add(new Trabajador("Lorena", "666666666Q", 118));
 		o.add(t);
 		
 		System.out.println("Diga cuánto cobran la hora los empleados");
 		cant=Leer.datoDouble();
 		
-		o.calcularSueldos(cant);
-		
 		do {
+			o.calcularSueldoTotal(cant);
 			System.out.println("1. Ver Sueldo de un empleado\n"
 					+ "2. Cambiar número de horas trabajadas\n"
 					+ "3. Ordenar trabajadores por número de horas (de menor a mayor)\n"

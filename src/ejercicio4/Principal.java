@@ -33,7 +33,7 @@ public class Principal {
 		}
 		
 		/*ordenado = new TreeMap<Contacto, Integer>(new ComparaPorID());*/ //Así en cada case
-		//Mé6todo replace para editar
+		//Método replace para editar
 	}
 
 }

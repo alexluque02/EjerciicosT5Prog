@@ -54,7 +54,7 @@ public class Oficina {
 		}
 	}
 	
-	public void calcularSueldos(double cant) {
+	public void calcularSueldoTotal(double cant) {
 		for (Trabajador t: listado) {
 			t.calcularSueldo(cant);
 		}
