@@ -22,11 +22,11 @@ public class Alimentacion extends Producto{
 		return super.toString()+"Alimentacion [caducidad=" + caducidad + "]";
 	}
 
-	public double calcularPrecio(double precio, double porc) {
+	public double calcularPrecio(double porc) {
 		if(caducidad<=2)
-			return super.calcularPrecio(precio, porc)*(1-porc);
+			return super.calcularPrecio(porc)*(1-porc/100);
 		else
-			return super.calcularPrecio(precio, porc);
+			return super.calcularPrecio(porc);
 	}
 	
 	public void avisarCaducidad() {

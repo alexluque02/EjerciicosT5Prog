@@ -2,7 +2,7 @@ package ejercicio4;
 
 import java.util.Objects;
 
-public class Contacto implements Comparable <Contacto>{
+public class Contacto{
 
 	private int id;
 	private String nombre;
@@ -60,11 +60,7 @@ public class Contacto implements Comparable <Contacto>{
 		return Objects.equals(correo, other.correo) && id == other.id && Objects.equals(nombre, other.nombre);
 	}
 	
-	public int compareTo(Contacto c) {
-		String nombrec1=this.nombre;
-		String nombrec2=c.getNombre();
-        return (nombrec1.toLowerCase().compareTo(nombrec2.toLowerCase()));
-    }
+	
 	
 	
 }

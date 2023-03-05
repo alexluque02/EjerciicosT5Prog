@@ -33,15 +33,15 @@ public class LineaVenta {
 		return "LineaVenta [p=" + p + ", cantidad=" + cantidad + "]";
 	}
 	
-	public double calcularSumaPrecio() {
-		return p.getPrecioUnitario()*cantidad;
+	public double calcularSumaPrecio(double porc) {
+		return p.calcularPrecio(porc)*cantidad;
 	}
 	
-	public void mostrarLinea() {
+	public void mostrarLinea(double porc) {
 		if(p instanceof Alimentacion) {
 			((Alimentacion) p).avisarCaducidad();
 		}
-		System.out.printf("Cod.:%d  %s x %d %.2f€\n", p.getId(), p.getNombre(), getCantidad(), p.getPrecioUnitario());
+		System.out.printf("Cod.:%d  %s x %d %.2f€\n", p.getId(), p.getNombre(), getCantidad(), calcularSumaPrecio(porc));
 
 	}
 }

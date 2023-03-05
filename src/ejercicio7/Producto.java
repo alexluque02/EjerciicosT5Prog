@@ -62,7 +62,7 @@ public class Producto {
 				&& Double.doubleToLongBits(precioUnitario) == Double.doubleToLongBits(other.precioUnitario);
 	}
 
-	public double calcularPrecio(double precio, double porc) {
+	public double calcularPrecio(double porc) {
 		return this.precioUnitario;
 	}
 }
